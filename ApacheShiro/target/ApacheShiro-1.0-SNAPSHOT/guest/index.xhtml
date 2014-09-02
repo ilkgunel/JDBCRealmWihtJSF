@@ -11,7 +11,9 @@ and open the template in the editor.
     </h:head>
     <body>
         <h1>Welcome to guest page</h1>
-        <a href="/logout">Log Out</a>
+        <h:form>
+        <h:commandButton value="Çıkış Yap" action="#{loginBean.logout()}"/>
+        </h:form>
         
     </body>
 </html>

@@ -77,5 +77,16 @@ public class LoginBean {
         
         return returnPage;
     }
-    
+    public String logout() {
+ 
+        Subject currentUser = SecurityUtils.getSubject();
+        
+        try {
+            currentUser.logout();
+        } catch (Exception ex) {
+            
+        }
+        
+        return "/login.xhtml?faces-redirect=true";
+    } 
 }
